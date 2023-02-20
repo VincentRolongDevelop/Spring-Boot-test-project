@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
   <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../static/bootstrap.css"/>
+  <link rel="icon" th:href="@{/image/springE.ico}" sizes="16x16 32x32" type="image/ico">
   <script th:src="@{/js/jquery.js}" src="../static/js/jquery.js"></script>
   <script th:src="@{/js/bootstrap.js}"src="../static/js/bootstrap.js"></script>
   <title>Spring Boot Test</title>
@@ -23,14 +24,23 @@
 		.card:hover{
 			transform:scale(1.15);
 			
-		}	
+		}
+		
+		.navbar-brand img{
+			width:172px;
+			height:50px;
+		}
+		
 	</style>
     
   </head>
   <body>
     <!--NavBar menu features-->
     <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #5fb832;">
-     <a class="navbar-brand" href="#">SPRING-BOOT</a>
+    
+    <!--ICON IMAGE PROCESS -->
+     <a class="navbar-brand" href="#"> <img th:src="@{/image/springC.png}" alt="..."></a>
+    
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,9 +58,9 @@
         <h3 class="text-center display-5">SPRING-BOOT Project</h3>
           <img class="mx-auto d-block" th:src="@{/image/springB.png}" src="../static/image/springB.png" width="510px" height="130px" alt="...">
            <p class="lead">This is a simple spring-boot project.</p>
-           <hr class="my-4">
+           <hr class="my-2">
            <p>Below we have a button test</p>
-        <a class="btn btn-outline-secondary btn-lg rounded-pill " href="#" role="button">Learn More</a>
+        <a class="btn btn-outline-secondary btn-lg rounded-pill " href="https://spring.io/" role="button">Learn More</a>
       </div>
 
       <div class="container">
