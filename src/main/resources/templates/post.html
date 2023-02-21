@@ -30,7 +30,6 @@
 			width:172px;
 			height:50px;
 		}
-		
 		.jumbotron{
 			height: 66vh;
 		}
@@ -52,42 +51,33 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link" th:href="@{/home/postNew}" href="#">New Card</a>
-          <a class="nav-item nav-link"  th:href="@{/}" href="#">Data</a>
+          <a class="nav-item nav-link"  th:href="@{/}" >Data</a>
           <a class="nav-item nav-link" th:href="@{/}" href="#">Products</a> 
         </div>
       </div>
     </nav>
 
       <div class="jumbotron">
-        <h3 class="text-center display-5">SPRING-BOOT Project</h3>
-          <img class="mx-auto d-block" th:src="@{/image/springB.png}" src="../static/image/springB.png" width="510px" height="130px" alt="...">
-           <p class="lead">This is a simple spring-boot project.</p>
-           <hr class="my-2">
-           <p>Below we have a button test</p>
-        <a class="btn btn-outline-secondary btn-lg rounded-pill " href="https://spring.io/" role="button">Learn More</a>
-      </div>
- 		<h3 class="text-center display-5">METHOD CARDS</h3>
-          <br/>
+        <h3 th:text=${post.title} class="text-center display-5"></h3>
+                  <hr class="my-2">
           
+
       <div class="container">
         <div class="row gy-3 my-3">
 
           <!--Cards for-each -->
-         
           <div th:each="post : ${posts}" class="col-sm-6 col-md-4 col-lg-3">
             <div class="card" style="width: 16rem;">
               <img th:src="${post.urImg}" width="50px" height="180px" src="../static/image/post.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 th:text="${post.title}" class="card-title">POST</h5>
                 <p th:text="${post.desciption}" class="card-text">The POST method submits an entity to the specified resource.</p>
-                <a th:href="@{/home/post?id=}+${post.id}" class="btn btn-primary">GO!</a>
+                <a href="#" class="btn btn-primary">GO!</a>
               </div>
             </div>
           </div>
         </div> 
       </div>  
-      
-      
     <br/>
   </body>
 </html>

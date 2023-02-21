@@ -3,7 +3,7 @@ package com.example.demo.Model;
 public class Post {
 	private int id;
 	private String desciption;
-	private String urImg;
+	private String urImg = "http://localhost:8080/image/update.jpg";
 	private String title;
 	
 	public int getId() {
