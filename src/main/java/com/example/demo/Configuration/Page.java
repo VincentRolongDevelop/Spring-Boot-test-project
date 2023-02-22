@@ -1,4 +1,4 @@
-package configuration;
+package com.example.demo.Configuration;
 
 public class Page {
 	public static String HOME = "index";
